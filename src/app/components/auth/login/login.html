@@ -1,0 +1,16 @@
+<!-- modified from this examplehttp://codepen.io/matthu185/pen/myyvgr?editors=110 -->
+<form method="post">
+
+  <h1>Sign In</h1>
+
+  <fieldset>
+
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_email" #userEmail>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="user_password" #userPassword>
+
+  </fieldset>
+  <button (click)="loginUser(userEmail.value, userPassword.value)">Login</button>
+</form>

@@ -1,0 +1,26 @@
+<!-- modified from this examplehttp://codepen.io/matthu185/pen/myyvgr?editors=110 -->
+<form>
+
+  <h1>Sign Up</h1>
+
+  <fieldset>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" #userName>
+
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_email" #userEmail>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="user_password" #userPassword>
+
+  </fieldset>
+
+  <fieldset>
+    <label for="job">User Type:</label>
+    <select id="job" name="user_job" #userType (change)="onChange($event, userType.value)">
+      <option value="team-member">Student / Team Member</option>
+      <option value="team-leader">Teacher / Team Leader</option>
+    </select>
+  </fieldset>
+  <button (click)="signUpUser(userType.value, userName.value, userEmail.value)">Sign Up</button>
+</form>
