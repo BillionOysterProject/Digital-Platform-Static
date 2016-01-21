@@ -15,11 +15,13 @@ export class AuthBackend {
 	// }
 	
 	login(username:string, password:string){
+        console.log(username, password)
 		// do something
 		// return this.makeRequest(`repos/${org}/${repo}`);
 	}
 	
 	signup(type: string, name: string, accountType: string){
+        console.log(type, name, accountType)
 		// console.log(name, type, accountType)
 		//do something
 	}
