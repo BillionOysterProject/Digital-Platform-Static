@@ -1,5 +1,5 @@
 <!-- modified from this examplehttp://codepen.io/matthu185/pen/myyvgr?editors=110 -->
-<form method="post">
+<form>
 
   <h1>Sign In</h1>
 
@@ -13,4 +13,10 @@
 
   </fieldset>
   <button (click)="loginUser(userEmail.value, userPassword.value)">Login</button>
+  <div *ngIf="user.Item">
+      email: {{user.Item.userEmail}}<br>
+      username: {{user.Item.userName}}<br>
+      password: {{user.Item.userPassword}}<br>
+      group: {{user.Item.group}}
+  </div>
 </form>

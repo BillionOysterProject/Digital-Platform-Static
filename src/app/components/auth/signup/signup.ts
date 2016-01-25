@@ -3,19 +3,21 @@ import {Http} from 'angular2/http';
 import {AuthBackend} from '../../../services/authenticate';
 
 @Component({
-  selector: 'signup',
-  templateUrl: 'app/components/auth/signup/signup.html',
-  styleUrls: ['app/components/auth/signup/signup.css'],
-  providers: [AuthBackend],
-  directives: [],
-  pipes: []
+    selector: 'signup',
+    templateUrl: 'app/components/auth/signup/signup.html',
+    styleUrls: ['app/components/auth/signup/signup.css'],
+    providers: [AuthBackend],
+    directives: [],
+    pipes: []
 })
 export class SignUp {
+    response = {};
+    constructor(http: Http, private authbackend: AuthBackend) { }
 
-  constructor(http: Http, private authbackend: AuthBackend) { }
+    signUpUser(type: string, email: string, name: string, password: string) {
 
-  signUpUser(type: string, name: string, accountType: string) {
-    this.authbackend.signup(type, name, accountType)
-  }
+        this.authbackend.signup(type, email, name, password)
+            .subscribe(res => { this.response = res });
+    }
 
 }

@@ -22,5 +22,7 @@
       <option value="team-leader">Teacher / Team Leader</option>
     </select>
   </fieldset>
-  <button (click)="signUpUser(userType.value, userName.value, userEmail.value)">Sign Up</button>
+  <button (click)="signUpUser(userType.value, userEmail.value, userName.value, userPassword.value)">Sign Up</button>
+   <div>{{response.signupMessage}}</div>
+  
 </form>
