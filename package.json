@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Front end for the BOP Digital Platform.",
   "scripts": {
-    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 8080 --content-base src"
+    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 8081 --content-base src"
   },
   "repository": {
     "type": "git",
