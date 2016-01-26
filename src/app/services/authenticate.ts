@@ -2,21 +2,21 @@ import {Injectable} from 'angular2/core';
 import {Http, Headers, URLSearchParams} from 'angular2/http';
 import 'rxjs/add/operator/map';
 
-const APIurl = 'http://localhost:3000/';
+const APIurl = 'http://bopdigitalplatform-dev.elasticbeanstalk.com/';
 
 @Injectable()
 export class AuthBackend {
 
     constructor(private http: Http) { }
-	
+
     // getOrg(org:string){
     // 	return this.makeRequest(`orgs/${org}`);
     // }
-	
+
     // getReposForOrg(org:string){
     // 	return this.makeRequest(`orgs/${org}/repos`);
     // }
-	
+
     login(username: string, password: string) {
         console.log('cats!')
         return this.loginRequest(username, password)
@@ -36,7 +36,7 @@ export class AuthBackend {
         let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        return this.http.post('http://localhost:3000/login', creds, {
+        return this.http.post('http://bopdigitalplatform-dev.elasticbeanstalk.com/login', creds, {
             headers: headers
         })
             .map(res => res.json())
@@ -48,7 +48,7 @@ export class AuthBackend {
         let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
         console.log(creds)
-        return this.http.post('http://localhost:3000/signup', creds, {
+        return this.http.post('http://bopdigitalplatform-dev.elasticbeanstalk.com/signup', creds, {
             headers: headers
         })
             .map(res => res.json())
