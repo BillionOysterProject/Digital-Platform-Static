@@ -2,7 +2,7 @@ import {Injectable} from 'angular2/core';
 import {Http, Headers, URLSearchParams} from 'angular2/http';
 import 'rxjs/add/operator/map';
 
-const APIurl = 'http://localhost:3000/';
+const APIurl = 'http://bopdigitalplatform-dev.elasticbeanstalk.com/';
 
 @Injectable()
 export class AuthBackend {
@@ -34,7 +34,7 @@ export class AuthBackend {
         let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        return this.http.post('http://localhost:3000/login', creds, {
+        return this.http.post('http://bopdigitalplatform-dev.elasticbeanstalk.com/login', creds, {
             headers: headers
         })
             .map(res => res.json());
@@ -46,7 +46,10 @@ export class AuthBackend {
            '&accountType=' + accountType;
         let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
-        return this.http.post('http://localhost:3000/signup', creds, {
+
+        console.log(creds)
+        return this.http.post('http://bopdigitalplatform-dev.elasticbeanstalk.com/signup', creds, {
+
             headers: headers
         })
             .map(res => res.json());
