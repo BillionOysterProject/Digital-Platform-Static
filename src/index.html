@@ -12,6 +12,7 @@
 
     <!-- base url -->
     <base href="{%= o.webpackConfig.metadata.baseUrl %}"> {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <!-- stylesheets -->
     <link href="{%= o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet"> {% } %}
 
 </head>
