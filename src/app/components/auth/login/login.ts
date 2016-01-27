@@ -12,13 +12,14 @@ import {AuthBackend} from '../../../services/authenticate';
 })
 export class Login {
     user = {};
-    
+
     constructor(http: Http, private authbackend: AuthBackend) { }
-    
+
     loginUser(username: string, password: string) {
         this.authbackend.login(username, password)
-        
-          .subscribe(res => {this.user = res});
-          
+          .subscribe(res => {
+              this.user = res;
+          });
+
     }
 }

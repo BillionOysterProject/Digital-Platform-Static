@@ -17,7 +17,7 @@ export class SignUp {
     signUpUser(type: string, email: string, name: string, password: string) {
 
         this.authbackend.signup(type, email, name, password)
-            .subscribe(res => { this.response = res });
+            .subscribe(res => { this.response = res; });
     }
 
 }
