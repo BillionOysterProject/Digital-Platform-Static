@@ -18,40 +18,41 @@ export class AuthBackend {
     // }
 
     login(username: string, password: string) {
-        console.log('cats!')
-        return this.loginRequest(username, password)
+        return this.loginRequest(username, password);
         // do something
         // return this.makeRequest(`repos/${org}/${repo}`);
     }
 
     signup(type: string, email: string, name: string, accountType: string) {
-        console.log(type, name, accountType)
-        return this.signupRequest(type, email, name, accountType)
+        return this.signupRequest(type, email, name, accountType);
         // console.log(name, type, accountType)
         //do something
     }
 
     private loginRequest(email: string, password: string) {
-        let creds = "email=" + email + "&password=" + password;
+        let creds = 'email=' + email + '&password=' + password;
         let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
         return this.http.post('http://bopdigitalplatform-dev.elasticbeanstalk.com/login', creds, {
             headers: headers
         })
-            .map(res => res.json())
+            .map(res => res.json());
 
     }
 
     private signupRequest(accountType: string, email: string, name: string, password: string) {
-        let creds = "email=" + email + "&password=" + password + "&name=" + name+ "&accountType=" + accountType;
+        let creds = 'email=' + email + '&password=' + password + '&name=' + name +
+           '&accountType=' + accountType;
         let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
         console.log(creds)
         return this.http.post('http://bopdigitalplatform-dev.elasticbeanstalk.com/signup', creds, {
+
             headers: headers
         })
-            .map(res => res.json())
+            .map(res => res.json());
 
     }
 }
