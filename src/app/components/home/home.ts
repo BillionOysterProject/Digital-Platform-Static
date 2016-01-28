@@ -1,12 +1,13 @@
-import {Component} from 'angular2/core';
+import {Component, ViewEncapsulation} from 'angular2/core';
 
 @Component({
   selector: 'home',
   templateUrl: 'app/components/home/home.html',
-  styleUrls: ['app/components/home/home.css'],
+  styles: [ require('./home.scss') ],
   providers: [],
   directives: [],
-  pipes: []
+  pipes: [],
+  encapsulation: ViewEncapsulation.None
 })
 export class Home {
 
