@@ -1,14 +1,15 @@
-import {Component} from 'angular2/core';
+import {Component, ViewEncapsulation} from 'angular2/core';
 import {Http} from 'angular2/http';
 import {AuthBackend} from '../../../services/authenticate';
 
 @Component({
     selector: 'login',
     templateUrl: 'app/components/auth/login/login.html',
-    styleUrls: ['app/components/auth/login/login.css'],
+    styles: [ require('./login.scss') ],
     providers: [AuthBackend],
     directives: [],
-    pipes: []
+    pipes: [],
+    encapsulation: ViewEncapsulation.None
 })
 export class Login {
     user = {};

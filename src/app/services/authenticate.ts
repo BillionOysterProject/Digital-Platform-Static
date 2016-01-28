@@ -47,7 +47,6 @@ export class AuthBackend {
         let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        console.log(creds)
         return this.http.post('http://bopdigitalplatform-dev.elasticbeanstalk.com/signup', creds, {
 
             headers: headers
