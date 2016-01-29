@@ -20,6 +20,7 @@ export class Login {
         this.authbackend.login(username, password)
           .subscribe(res => {
               this.user = res;
+              console.log(res);
           });
 
     }
