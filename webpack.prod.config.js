@@ -41,7 +41,8 @@ module.exports = {
 
     entry: {
         'polyfills': './src/polyfills.ts',
-        'main': './src/main.ts' // our angular app
+        'main': './src/main.ts', // our angular app
+        'bootstrap-loader': 'bootstrap-loader'
     },
 
     // Config for our build files
@@ -104,6 +105,9 @@ module.exports = {
 
             // Support for sass
             { test: /\.scss$/, loader: 'raw-loader!sass-loader' },
+
+            // fonts
+            { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000' },
 
             // support for .html as raw text
             { test: /\.html$/, loader: 'raw-loader' }

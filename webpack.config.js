@@ -26,7 +26,13 @@ module.exports = {
     // cache: false,
 
     // our angular app
-    entry: { 'polyfills': './src/polyfills.ts', 'main': './src/main.ts' },
+    // entry: { 
+    //     'polyfills': './src/polyfills.ts', 
+    //     'main': './src/main.ts'},
+    entry: { 
+        'polyfills': './src/polyfills.ts', 
+        'main': './src/main.ts',
+        'bootstrap-loader': 'bootstrap-loader'},
 
     // Config for our build files
     output: {
@@ -62,7 +68,10 @@ module.exports = {
             { test: /\.css$/, loader: 'raw-loader' },
 
             // Support for sass
-            { test: /\.scss$/, exclude: /node_modules/, loader: 'raw-loader!sass-loader' },
+            { test: /\.scss$/, exclude: /node_modules/, loader: 'raw-loader!sass-loader' },,
+            
+            // fonts
+            { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000' },
 
             // support for .html as raw text
             { test: /\.html$/, loader: 'raw-loader' }
