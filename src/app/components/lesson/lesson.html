@@ -1,153 +1,281 @@
-<div class="row">
-  <div class="large-12 columns">
-    <h1>Form</h1>
-  </div>
-</div> 
+<!-- FORM -->
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form>
 
-<div class="row">
-  <div class="large12 medium-12 columns">
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
 
-        <!-- filler text -->
-        <ul>
-          <li>Published Date</li>
-          <li>?? Resource Type</li>
-          <li>Summary</li>
-          <li>Objectives</li>
-          <li>Shared Learning Target</li>
-          <li>Materials</li>
-          <li>Background</li>
-          <li>Instruction Plan (More detailed: Engage, Explore, Explain, Elaborate, Evaluate)</li>
-          <li>Online Resources</li>
-        </ul>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="lessontitle">Lesson Title</label>
+                    <input type="text" class="form-control" id="lessontitle" placeholder="Lesson Title">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="Unit">Unit</label>
+                    <select class="form-control">
+                      <option>Action</option>
+                      <option>Field</option>
+                    </select>  
+                  </div>
+                </div>
+              </div><!--/row-->
+              <div class="row">
+                <div class="col-md-6">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="Grade">Grade</label>
+                    <select class="form-control">
+                      <option>6-8</option>
+                      <option>4th</option>
+                      <option>5th</option>
+                      <option>6th</option>
+                      <option>7th</option>
+                      <option>8th</option>
+                    </select>
+                  </div>
+                </div> 
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="Grade">Class Periods</label>
+                      <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                      </select>
 
-        <!-- filler text --><form data-abide novalidate>
-  <div data-abide-error class="alert callout" style="display: none;">
-    <p><i class="fi-alert"></i> There are some errors in your form.</p>
+
+<!-- Date Picker (I like this as a clock| https://eonasdan.github.io/bootstrap-datetimepicker/) <div class="container">
+    <div class="row">
+        <div class='col-sm-4'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker3'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker3').datetimepicker({
+                    format: 'LT'
+                });
+            });
+        </script>
+    </div>
+</div>-->
+
+
+                  </div>
+                </div> 
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="Setting">Setting</label>
+                    <select class="form-control">
+                      <option>Classroom</option>
+                      <option>Field</option>
+                    </select>  
+                  </div>
+                </div> 
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="protocolconnections">Protocol Connections</label>
+                    <input type="text" class="form-control" id="lessontitle" placeholder="Lesson Title">
+                  </div>
+                </div> 
+              </div>
+              <div class="col-md-6">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="SubjectArea"><i class="fa fa-graduation-cap"></i>SubjectArea(s) <span class="glyphicon glyphicon-option-vertical" aria-hidden="true" data-toggle="modal" data-target=".bs-example-modal-lg"></span></label>
+
+                    <p>This is a dynamic module area</p>
+                  </div>
+                </div>
+              </div>
+              </div><!--/row-->
+            </div><!--/ Pannel-body -->
+          </div><!--/ Pannel -->
+
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <label for="lessonsummary">Lesson Summary</label>
+                  <textarea class="form-control" rows="8"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="objectives">Objectives</label>
+                      <textarea class="form-control" rows="6"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="vocabulary">Vocabulary</label>
+                      <textarea class="form-control" rows="6" placeholder="This is a dynamic module area"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="objectives">Supplies</label>
+                      <textarea class="form-control" rows="6"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="vocabulary">Teacher Resources</label>
+                      <textarea class="form-control" rows="6" placeholder="This is a dynamic module area"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="handouts">Handouts</label>
+                        <div class="form-group">
+                          <label for="exampleInputFile">File input</label>
+                          <input type="file" id="exampleInputFile">
+                          <p class="help-block">Grad & Drop your Files or upload theme here</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="background">Background</label>
+                      <textarea class="form-control" rows="6"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="insttructionplan">Instruction Plan</label>
+                      <textarea class="form-control" rows="6"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="nycsciencescope">New York City Science Scope & Sequence</label>
+                        <input type="text" class="form-control" id="nycsciencescope" placeholder="Grade 8, Unit1: Humans and the Environment">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="ngssstandards">NGSS Standards</label>
+                        <input type="text" class="form-control" id="ngssstandards" placeholder="Select a Standard">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="commoncoreela">Common Core ELA</label>
+                        <input type="text" class="form-control" id="commoncoreela" placeholder="Select a Standard">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="commoncoremath">Common Core Math</label>
+                        <input type="text" class="form-control" id="commoncoremath" placeholder="Select a Standard">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <div class="small-12 columns">
-      <label>Lesson Title
-        <input type="text" placeholder="Curriculum Title" aria-describedby="exampleHelpText" required pattern="text">
-        <span class="form-error">
-          Yo, you had better fill this out, it's required.
-        </span>
-      </label>
-      <p class="help-text" id="exampleHelpText">What's the name of your Curriculum</p>
-    </div>
-    <div class="small-12 columns">
-  <div class="row">
-    <fieldset class="large-12 columns">
-      <legend>Resource Type</legend>
-      <input type="radio" name="pokemon" value="Lesson Plan" id="pokemonRed"><label for="pokemonRed">Lesson Plan</label>
-      <input type="radio" name="pokemon" value="Powerpoint" id="pokemonBlue" required><label for="pokemonBlue">Powerpoint</label>
-      <input type="radio" name="pokemon" value="Video" id="pokemonYellow"><label for="pokemonYellow">Video</label>
-      <input type="radio" name="pokemon" value="Image" id="pokemonRed"><label for="pokemonRed">Image</label>
-      <input type="radio" name="pokemon" value="Dataset" id="pokemonBlue" required><label for="pokemonBlue">Dataset</label>
-      <input type="radio" name="pokemon" value="Document" id="pokemonYellow"><label for="pokemonYellow">Document</label>
-      <input type="radio" name="pokemon" value="Web Resource" id="pokemonYellow"><label for="pokemonYellow">Web Resource</label>
-    </fieldset>
-  </div>
-    </div>
-    <div class="small-12 columns">
-      <label>Summary
-        <input type="text" placeholder="Summary" aria-describedby="exampleHelpText" required pattern="text">
-        <span class="form-error">
-          Yo, you had better fill this out, it's required.
-        </span>
-      </label>
-      <p class="help-text" id="exampleHelpText">Give a brief discription of Curriculum</p>
-    </div>
-    <div class="small-12 columns">
-      <label><i class="fa fa-check-square-o"></i> Objective
-        <input type="text" placeholder="Objective" aria-describedby="exampleHelpText" required pattern="text">
-        <span class="form-error">
-          Yo, you had better fill this out, it's required.
-        </span>
-      </label>
-    </div>
-    <div class="small-12 columns">
-      <label><i class="fa fa-dot-circle-o"></i> Shared Learning Target
-        <input type="text" placeholder="Shared Learning Target" aria-describedby="exampleHelpText" required pattern="text">
-        <span class="form-error">
-          Shared Learning Targets frame the lesson from the students’ point of view.
-        </span>
-      </label>
-    </div>
-    <!--
-    <div class="small-12 columns">
-      <label>Nothing Required!
-        <input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTex" data-abide-ignore>
-      </label>
-      <p class="help-text" id="exampleHelpTex">This input is ignored by Abide using `data-abide-ignore`</p>
-    </div>
-    <div class="small-12 columns">
-      <label>Password Required
-        <input type="password" id="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText" required >
-        <span class="form-error">
-          I'm required!
-        </span>
-      </label>
-      <p class="help-text" id="exampleHelpText">Enter a password please.</p>
-    </div>
-    <div class="small-12 columns">
-      <label>Re-enter Password
-        <input type="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText2" required pattern="alpha_numeric" data-equalto="password">
-        <span class="form-error">
-          Hey, passwords are supposed to match!
-        </span>
-      </label>
-      <p class="help-text" id="exampleHelpText2">This field is using the `data-equalto="password"` attribute, causing it to match the password field above.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="medium-6 columns">
-      <label>URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a valid URL.
-        <input type="text" placeholder="http://foundation.zurb.com" pattern="url">
-      </label>
-    </div>
-    <div class="medium-6 columns">
-      <label>European Cars, Choose One, it can't be the blank option.
-        <select id="select" required>
-          <option value=""></option>
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <fieldset class="large-6 columns">
-      <legend>Choose Your Favorite, and this is required, so you have to pick one.</legend>
-      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue" required><label for="pokemonBlue">Blue</label>
-      <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
-    </fieldset>
-    <fieldset class="large-6 columns">
-      <legend>Choose Your Favorite - not required, you can leave this one blank.</legend>
-      <input type="radio" name="pockets" value="Red" id="pocketsRed"><label for="pocketsRed">Red</label>
-      <input type="radio" name="pockets" value="Blue" id="pocketsBlue"><label for="pocketsBlue">Blue</label>
-      <input type="radio" name="pockets" value="Yellow" id="pocketsYellow"><label for="pocketsYellow">Yellow</label>
-    </fieldset>
-    <fieldset class="large-6 columns">
-      <legend>Check these out</legend>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox" required><label for="checkbox2">Checkbox 2</label>
-      <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
-    </fieldset>
-  </div>
--->
-  <div class="row">
-    <fieldset class="large-2 small-2 columns">
-      <button class="button" type="submit" value="Submit">Submit</button>
-    </fieldset>
-    <fieldset class="large-1 small-3 large-offset-9 columns">
-      <button class="button" type="reset" value="Reset">Reset</button>
-    </fieldset>
-  </div>
-</form>
-    
-  </div><!-- /col -->
-</div>
+
+
+
+
+<!-- FORM -->
