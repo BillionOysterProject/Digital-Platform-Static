@@ -9,14 +9,6 @@ export class AuthBackend {
 
     constructor(private http: Http) { }
 
-    // getOrg(org:string){
-    // 	return this.makeRequest(`orgs/${org}`);
-    // }
-
-    // getReposForOrg(org:string){
-    // 	return this.makeRequest(`orgs/${org}/repos`);
-    // }
-
     login(username: string, password: string) {
         return this.loginRequest(username, password);
         // do something
@@ -34,7 +26,7 @@ export class AuthBackend {
         let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        return this.http.post('http://bopdigitalplatform-dev.elasticbeanstalk.com/login', creds, {
+        return this.http.post('http://localhost:3000/login', creds, {
             headers: headers
         })
             .map(res => res.json());
@@ -47,7 +39,7 @@ export class AuthBackend {
         let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        return this.http.post('http://bopdigitalplatform-dev.elasticbeanstalk.com/signup', creds, {
+        return this.http.post('http://localhost:3000/signup', creds, {
 
             headers: headers
         })
