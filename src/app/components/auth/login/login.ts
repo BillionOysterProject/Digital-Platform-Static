@@ -20,7 +20,9 @@ export class Login {
         this.authbackend.login(username, password)
           .subscribe(res => {
               this.user = res;
-              console.log(res);
+              console.log(res.profile);
+              localStorage.setItem('profile', JSON.stringify(res.profile));
+              localStorage.setItem('id_token', res.token);
           });
 
     }
