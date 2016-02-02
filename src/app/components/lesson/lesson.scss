@@ -135,3 +135,49 @@ label.light {
   position: relative;
   bottom: 16px;
 }
+.panel .panel-heading{
+  background:transparent;
+  border-radius:0px;
+  border-bottom:0px;
+  padding:20px 20px 7px 20px;
+  position:relative;z-index:3;
+  min-height:48px;
+}
+.panel .panel-heading .panel-title{
+  font-family:'Montserrat';
+  text-transform:uppercase;
+  display:inline-block;
+  letter-spacing:0.02em;
+  font-size:12px;
+  font-weight:600;
+  margin:0;
+  padding:0;
+  line-height:normal;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-text-stroke:0px;
+  filter:alpha(opacity=40);
+  -webkit-transition:opacity 0.3s ease;
+  transition:opacity 0.3s ease;
+}
+.panel .panel-heading .panel-controls{
+  float:right;margin-top:-3px;
+}
+.panel .panel-heading .panel-controls ul{
+  margin:0;
+  padding:0;
+}
+.panel .panel-heading .panel-controls ul li{
+  display:inline-block;
+  list-style:none;
+  line-height:0;
+}
+.portlet-icon{-moz-osx-font-smoothing:grayscale;
+  /* font-family:"pages-icon";
+  font-style:normal;
+  font-variant:normal;
+  font-weight:normal; */
+  color: #grey;
+  line-height:1;
+  text-transform:none;
+}
