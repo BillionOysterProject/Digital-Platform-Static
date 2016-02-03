@@ -3,6 +3,7 @@ import {Router, Route, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {Home} from './components/home/home';
 // import {About} from './components/about/about';
+import {BasicEditor} from './services/quill/basic-editor'
 
 import {SignUp} from './components/auth/signup/signup';
 import {Login} from './components/auth/login/login';
