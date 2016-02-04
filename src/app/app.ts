@@ -18,7 +18,7 @@ import {Lesson} from './components/lesson/lesson';
 @RouteConfig([
   new Route({ path: '/', component: Home, name: 'Home', useAsDefault: true}),
   new Route({ path: '/signup', component: SignUp, name: 'SignUp'}),
-  new Route({ path: '/login', component: Login, name: 'Login'})
+  new Route({ path: '/login', component: Login, name: 'Login'}),
   new Route({ path: '/lesson', component: Lesson, name: 'Lesson'})
 
 

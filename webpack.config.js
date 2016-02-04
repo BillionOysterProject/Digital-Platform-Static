@@ -26,9 +26,7 @@ module.exports = {
     // cache: false,
 
     // our angular app
-    // entry: { 
-    //     'polyfills': './src/polyfills.ts', 
-    //     'main': './src/main.ts'},
+
     entry: { 
         'polyfills': './src/polyfills.ts', 
         'main': './src/main.ts',
