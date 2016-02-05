@@ -75,7 +75,7 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(true),
         new webpack.optimize.CommonsChunkPlugin({ name: 'polyfills', filename: 'polyfills.bundle.js', minChunks: Infinity }),
         // static assets
-        // new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ]),
+        new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ]),
         // generating html
         new HtmlWebpackPlugin({ template: 'src/index.html', inject: false }),
         // replace
@@ -97,7 +97,7 @@ module.exports = {
     devServer: {
         port: metadata.port,
         host: metadata.host,
-        contentBase: 'src/',
+        // contentBase: 'src/',
         historyApiFallback: true,
         watchOptions: { aggregateTimeout: 300, poll: 1000 }
     },

@@ -11,7 +11,7 @@ if ('production' !== process.env.ENV) {
   // In production Reflect with es7-reflect-metadata/reflect-metadata is added
   // by webpack.prod.config ProvidePlugin
   Error['stackTraceLimit'] = Infinity;
-  Zone['longStackTraceZone'] = require('zone.js/lib/zones/long-stack-trace.js');
+  Zone['longStackTraceZone'] = require('zone.js/lib/zones/long-stack-trace');
 
   // RxJS
   // In production manually include the operators you use
