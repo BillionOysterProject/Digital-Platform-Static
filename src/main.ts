@@ -32,13 +32,7 @@ document.addEventListener('DOMContentLoaded', function main() {
     ENV_PROVIDERS,
     HTTP_PROVIDERS,
     ROUTER_PROVIDERS,
-    provide(LocationStrategy, { useClass: HashLocationStrategy }),
-    provide(AuthHttp, { useFactory: () => {
-      return new AuthHttp({
-        tokenName: 'token',
-        noJwtError: true
-      })
-    }})
+    provide(LocationStrategy, { useClass: HashLocationStrategy })
   ])
   .catch(err => console.error(err));
 

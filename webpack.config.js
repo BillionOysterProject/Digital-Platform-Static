@@ -11,7 +11,7 @@ var metadata = {
     title: 'DEV - BOP Digital Platform',
     baseUrl: '/',
     host: 'localhost',
-    port: 3000,
+    port: 8081,
     ENV: ENV
 };
 /*
