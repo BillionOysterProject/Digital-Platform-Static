@@ -1,5 +1,5 @@
 <!-- modified from this examplehttp://codepen.io/matthu185/pen/myyvgr?editors=110 -->
-<form>
+<form (submit)="loginUser($event, userEmail.value, userPassword.value)">
 
   <h1>Sign In</h1>
 
@@ -12,11 +12,5 @@
     <input type="password" id="password" name="user_password" #userPassword>
 
   </fieldset>
-  <button (click)="loginUser(userEmail.value, userPassword.value)">Login</button>
-  <div *ngIf="user.Item">
-      email: {{user.Item.userEmail}}<br>
-      username: {{user.Item.userName}}<br>
-      password: {{user.Item.userPassword}}<br>
-      group: {{user.Item.group}}
-  </div>
+  <button type="submit" class="btn btn-default">Login</button>
 </form>

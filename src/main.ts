@@ -1,19 +1,21 @@
 
-  /*
- * Providers provided by Angular
- */
+/*
+* Providers provided by Angular
+*/
 import {provide, enableProdMode} from 'angular2/core';
 import {bootstrap, ELEMENT_PROBE_PROVIDERS} from 'angular2/platform/browser';
+import { FORM_PROVIDERS } from 'angular2/common';
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
-import {HTTP_PROVIDERS} from 'angular2/http';
+import {Http, HTTP_PROVIDERS} from 'angular2/http';
+import { AuthConfig, AuthHttp } from 'angular2-jwt';
 
 const ENV_PROVIDERS = [];
 
 if ('production' === process.env.ENV) {
   enableProdMode();
-// } else {
+  // } else {
 }
-  ENV_PROVIDERS.push(ELEMENT_PROBE_PROVIDERS);
+ENV_PROVIDERS.push(ELEMENT_PROBE_PROVIDERS);
 
 /*
  * App Component
@@ -27,14 +29,24 @@ import {App} from './app/app';
  * our Services and Providers into Angular's dependency injection
  */
 document.addEventListener('DOMContentLoaded', function main() {
-  bootstrap(App, [
-    ENV_PROVIDERS,
-    HTTP_PROVIDERS,
-    ROUTER_PROVIDERS,
-    provide(LocationStrategy, { useClass: HashLocationStrategy })
-  ])
-  .catch(err => console.error(err));
-
+  bootstrap(
+    App,
+    [
+      FORM_PROVIDERS,
+      ENV_PROVIDERS,
+      HTTP_PROVIDERS,
+      ROUTER_PROVIDERS,
+      provide(LocationStrategy, { useClass: HashLocationStrategy }),
+      provide(AuthHttp, {
+        useFactory: (http) => {
+          return new AuthHttp(new AuthConfig({
+            tokenName: 'jwt'
+          }), http);
+        },
+        deps: [Http]
+      })
+    ])
+    .catch(err => console.error(err));
 });
 
 // For vendors for example jQuery, Lodash, angular2-jwt just import them anywhere in your app

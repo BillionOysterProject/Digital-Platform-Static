@@ -16,7 +16,8 @@
         "./test/**/*.ts",
         "!./node_modules/**/*.ts",
         "src/custom_typings.d.ts",
-        "typings/browser.d.ts"
+        "typings/browser.d.ts",
+        "custom_typings/_jwt_decode.d.ts"
     ],
     "compileOnSave": false,
     "buildOnSave": false,
